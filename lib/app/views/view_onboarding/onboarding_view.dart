@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,9 +9,9 @@ import 'package:influencer_app/app/views/view_onboarding/bloc/onboarding_state.d
 import 'package:influencer_app/core/constants/colors_constants/light_theme_constants/light_theme_color_constants.dart';
 import 'package:influencer_app/core/widgets/onboarding_widget.dart';
 import 'package:influencer_app/gen/assets.gen.dart';
-
+@RoutePage()
 class OnboardingView extends StatelessWidget {
-  const OnboardingView({Key? key}) : super(key: key);
+  OnboardingView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,15 +34,13 @@ class OnboardingView extends StatelessWidget {
                     onboardingWidget(
                       context: context,
                       pageIndex: 0,
-                      image: Image.asset(
-                          Assets.images.png.imagePngOnboardingOne.path),
+                      image: Assets.images.png.imagePngOnboardingOne.path,
                       title: L10n.of(context)!.onbtitleone,
                       desc: L10n.of(context)!.onbdescone,
                     ),
                     onboardingWidget(
                       context: context,
-                      image: Image.asset(
-                          Assets.images.png.imagePngOnboardingTwo.path),
+                      image: Assets.images.png.imagePngOnboardingTwo.path,
                       pageIndex: 1,
                       // imageUrl: 'assets/images/page2.png',
                       title: L10n.of(context)!.onbtitletwo,
@@ -49,8 +48,7 @@ class OnboardingView extends StatelessWidget {
                     ),
                     onboardingWidget(
                       context: context,
-                      image: Image.asset(
-                          Assets.images.png.imagePngOnboardingThree.path),
+                      image: Assets.images.png.imagePngOnboardingThree.path,
                       pageIndex: 2,
                       // imageUrl: 'assets/images/page3.png',
                       title: L10n.of(context)!.onbtitlethree,

@@ -43,8 +43,8 @@ class $AssetsImagesPngGen {
         imagePngLogo,
         imagePngLogoHorizantal,
         imagePngOnboardingOne,
-        imagePngOnboardingTwo,
         imagePngOnboardingThree,
+        imagePngOnboardingTwo
       ];
 }
 

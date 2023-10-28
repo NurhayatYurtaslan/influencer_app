@@ -1,7 +1,10 @@
 import 'dart:async';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:influencer_app/app/views/view_splash/view_model/splash_event.dart';
 import 'package:influencer_app/app/views/view_splash/view_model/splash_state.dart';
+
+import '../../../routes/app_router.gr.dart';
 
 // import 'package:auto_route/auto_route.dart';
 
@@ -46,7 +49,7 @@ class SplashViewModel extends Bloc<SplashEvent, SplashState> {
             // state.isNewUser
             //     ? event.context.router.replace(OnboardingViewRoute())
             //     : event.context.router.replace(RegistrationViewRoute());
-            // event.context.router.replace(OnboardingViewRoute());
+            event.context.router.replace(OnboardingViewRoute());
           });
   }
 }

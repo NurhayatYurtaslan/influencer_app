@@ -154,11 +154,19 @@ extension Aligment on BuildContext {
   Alignment get atopRight => Alignment.topRight;
 }
 
+extension TextAlignment on BuildContext {
+  TextAlign get textcenter => TextAlign.center;
+  TextAlign get textend => TextAlign.end;
+  TextAlign get textjustify => TextAlign.justify;
+  TextAlign get textleft => TextAlign.left;
+  TextAlign get textright => TextAlign.right;
+  TextAlign get textstart => TextAlign.start;
+}
+
 extension BorderExtension on BuildContext {
   BorderRadius get borderlow => BorderRadius.all(lowRadius);
   BorderRadius get bordernormal => BorderRadius.all(normalRadius);
   BorderRadius get borderhigh => BorderRadius.all(highRadius);
-  
 
   BorderRadius get borderzero => BorderRadius.zero;
   BorderRadius get bordercirlow => BorderRadius.circular(lowValue);
@@ -166,9 +174,18 @@ extension BorderExtension on BuildContext {
   BorderRadius get bordercirmedium => BorderRadius.circular(mediumValue);
   BorderRadius get bordercirhigh => BorderRadius.circular(highValue);
 
-  BorderRadius get borderhorlefthigh => BorderRadius.horizontal(left: highRadius);
-  
+  BorderRadius get borderhorlefthigh =>
+      BorderRadius.horizontal(left: highRadius);
+  BorderRadius get borderhorleftlow => BorderRadius.horizontal(left: lowRadius);
+  BorderRadius get borderhorrightlow =>
+      BorderRadius.horizontal(right: lowRadius);
+  BorderRadius get borderhorrighthigh =>
+      BorderRadius.horizontal(right: highRadius);
+
+  BorderRadius get borderverttoplow => BorderRadius.vertical(top: lowRadius);
+  BorderRadius get borderverttophight => BorderRadius.vertical(top: highRadius);
+  BorderRadius get bordervertbottomlow =>
+      BorderRadius.vertical(bottom: lowRadius);
+  BorderRadius get bordervertbottomhigh =>
+      BorderRadius.vertical(bottom: highRadius);
 }
-
-
-

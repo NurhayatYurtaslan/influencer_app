@@ -1,22 +1,23 @@
+
 import 'package:flutter/material.dart';
 import 'package:influencer_app/app/views/view_splash/splash_view.dart';
 import 'package:influencer_app/core/constants/colors_constants/light_theme_constants/light_theme_color_constants.dart';
 import 'package:influencer_app/core/extension/context_extension.dart';
 
 final PageController controller = PageController(initialPage: 0);
+// ignore: invalid_annotation_target
 
 Widget onboardingWidget({
   required pageIndex,
   required title,
   required desc,
-  required BuildContext context, required Image image,
+  required BuildContext context,
+  required String image,
 }) {
   return Column(
     mainAxisAlignment: context.center,
     children: [
-      // Image.asset(
-      //   imageUrl,
-      // ),
+      Image.asset(image),
       const SizedBox(height: 40),
       Text(
         title,

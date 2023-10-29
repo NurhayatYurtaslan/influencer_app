@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:influencer_app/app/views/view_splash/splash_view.dart';
 import 'package:influencer_app/core/constants/colors_constants/light_theme_constants/light_theme_color_constants.dart';
@@ -18,11 +17,10 @@ Widget onboardingWidget({
     mainAxisAlignment: context.center,
     children: [
       Image.asset(image),
-      const SizedBox(height: 40),
-      Text(
-        title,
-        style: Theme.of(context).textTheme.titleLarge,
-      ),
+      SizedBox(child: context.sizedHeighthBoxExtraHigh),
+      Text(title, style: TextStyle(fontSize: 35)
+          // Theme.of(context).textTheme.titleLarge,
+          ),
       const SizedBox(height: 10),
       Padding(
         padding: context.horizontalPaddingHigh,
@@ -32,7 +30,7 @@ Widget onboardingWidget({
           style: Theme.of(context).textTheme.titleSmall,
         ),
       ),
-      const SizedBox(height: 120),
+      SizedBox(child: context.sizedHeighthBoxExtraHigh),
       Padding(
         padding: context.horizontalPaddingHigh,
         child: Row(

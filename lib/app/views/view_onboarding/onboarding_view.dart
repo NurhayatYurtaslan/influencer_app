@@ -7,11 +7,12 @@ import 'package:influencer_app/app/views/view_onboarding/bloc/onboarding_bloc.da
 import 'package:influencer_app/app/views/view_onboarding/bloc/onboarding_event.dart';
 import 'package:influencer_app/app/views/view_onboarding/bloc/onboarding_state.dart';
 import 'package:influencer_app/core/constants/colors_constants/light_theme_constants/light_theme_color_constants.dart';
+import 'package:influencer_app/core/extension/context_extension.dart';
 import 'package:influencer_app/core/widgets/onboarding_widget.dart';
 import 'package:influencer_app/gen/assets.gen.dart';
 @RoutePage()
 class OnboardingView extends StatelessWidget {
-  OnboardingView({Key? key}) : super(key: key);
+  const OnboardingView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +22,7 @@ class OnboardingView extends StatelessWidget {
         child: BlocBuilder<OnboardingBloc, OnboardingStates>(
           builder: (context, state) {
             return Stack(
-              alignment: Alignment.center,
+              alignment: context.acenter,
               children: [
                 PageView(
                   controller: controller,
@@ -69,7 +70,8 @@ class OnboardingView extends StatelessWidget {
                       size: const Size.square(9.0),
                       activeSize: const Size(36.0, 9.0),
                       activeShape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5.0)),
+                          borderRadius: context.bordercirlow
+                          ),
                     ),
                   ),
                 ),

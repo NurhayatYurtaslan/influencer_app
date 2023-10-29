@@ -22,10 +22,10 @@ class SplashView extends StatelessWidget {
             return Scaffold(
                 body: Container(
               width: context.width,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                   gradient: LinearGradient(
-                begin: Alignment.bottomLeft,
-                end: Alignment.topRight,
+                begin: context.abottomLeft,
+                end: context.abottomRight,
                 colors: [
                   AppLightColorConstants.bgLight,
                   AppLightColorConstants.secondaryColor,
@@ -37,19 +37,7 @@ class SplashView extends StatelessWidget {
                   mainAxisAlignment: context.center,
                   crossAxisAlignment: context.ccenter,
                   children: [
-                    // SizedBox(
-                    //   height: context.height / 40,
-                    // ),
                     Image.asset(Assets.images.png.imagePngLogo.path),
-
-                    // Text(
-                    //   L10n.of(context)!.influencerapp,
-                    //   style: TextStyle(
-                    //     fontSize: 25,
-                    //     fontFamily: 'Georgia',
-                    //   ),
-                    //   textAlign: TextAlign.center,
-                    // )
                   ],
                 ),
               ),

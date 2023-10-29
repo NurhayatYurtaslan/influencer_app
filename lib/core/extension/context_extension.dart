@@ -118,11 +118,17 @@ extension SizedBoxNum on BuildContext {
   SizedBox get sizedHeightBoxNormal => SizedBox(height: constNormalValue);
   SizedBox get sizedHeightBoxMedium => const SizedBox(height: 24);
   SizedBox get sizedHeightBoxHigh => const SizedBox(height: 32);
+  SizedBox get sizedHeighthBoxExtraHigh => const SizedBox(
+        height: 48,
+      );
 
   SizedBox get sizedWidthBoxLow => const SizedBox(width: 8);
   SizedBox get sizedWidthBoxNormal => const SizedBox(width: 16);
   SizedBox get sizedWidthBoxMedium => const SizedBox(width: 24);
   SizedBox get sizedWidthBoxHigh => const SizedBox(width: 32);
+  SizedBox get sizedWidthBoxExtraHigh => const SizedBox(
+        width: 48,
+      );
 }
 
 extension MainaxisAlignment on BuildContext {
@@ -189,3 +195,7 @@ extension BorderExtension on BuildContext {
   BorderRadius get bordervertbottomhigh =>
       BorderRadius.vertical(bottom: highRadius);
 }
+
+// extension SizeNum on BuildContext {
+//   Size get 
+// }

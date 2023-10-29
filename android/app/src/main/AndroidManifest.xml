@@ -2,7 +2,7 @@
     <application
         android:label="influencer_app"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher_prod">
+        android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -1,17 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:influencer_app/app/routes/app_router.dart';
 import 'package:influencer_app/app/theme/light/light_theme_data.dart';
 import 'l10n/app_localizations.dart';
 // import 'routes/app_router.dart';
 
-void main() {
-  SystemChrome.setSystemUIOverlayStyle(
-      // statusBar kaldırmak için
-      const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-  runApp(const App());
-}
 
 class App extends StatefulWidget {
   const App({super.key});

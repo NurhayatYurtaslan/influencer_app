@@ -3,6 +3,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:influencer_app/app/l10n/app_localizations.dart';
+import 'package:influencer_app/app/routes/app_router.gr.dart';
 import 'package:influencer_app/app/views/view_onboarding/bloc/onboarding_bloc.dart';
 import 'package:influencer_app/app/views/view_onboarding/bloc/onboarding_event.dart';
 import 'package:influencer_app/app/views/view_onboarding/bloc/onboarding_state.dart';
@@ -10,6 +11,7 @@ import 'package:influencer_app/core/constants/colors_constants/light_theme_const
 import 'package:influencer_app/core/extension/context_extension.dart';
 import 'package:influencer_app/core/widgets/onboarding_widget.dart';
 import 'package:influencer_app/gen/assets.gen.dart';
+
 @RoutePage()
 class OnboardingView extends StatelessWidget {
   const OnboardingView({Key? key}) : super(key: key);
@@ -33,6 +35,9 @@ class OnboardingView extends StatelessWidget {
                   },
                   children: [
                     onboardingWidget(
+                      ontap: () {
+                        context.router.push(SignUpViewRoute());
+                      },
                       context: context,
                       pageIndex: 0,
                       image: Assets.images.png.imagePngOnboardingOne.path,
@@ -40,6 +45,9 @@ class OnboardingView extends StatelessWidget {
                       desc: L10n.of(context)!.onbdescone,
                     ),
                     onboardingWidget(
+                      ontap: () {
+                        context.router.push(SignUpViewRoute());
+                      },
                       context: context,
                       image: Assets.images.png.imagePngOnboardingTwo.path,
                       pageIndex: 1,
@@ -48,6 +56,7 @@ class OnboardingView extends StatelessWidget {
                       desc: L10n.of(context)!.onbdesctwo,
                     ),
                     onboardingWidget(
+                      ontap: context.router.push(SignUpViewRoute()),
                       context: context,
                       image: Assets.images.png.imagePngOnboardingThree.path,
                       pageIndex: 2,
@@ -70,8 +79,7 @@ class OnboardingView extends StatelessWidget {
                       size: const Size.square(9.0),
                       activeSize: const Size(36.0, 9.0),
                       activeShape: RoundedRectangleBorder(
-                          borderRadius: context.bordercirlow
-                          ),
+                          borderRadius: context.bordercirlow),
                     ),
                   ),
                 ),

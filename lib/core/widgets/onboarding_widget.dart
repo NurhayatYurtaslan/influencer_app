@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:influencer_app/app/views/view_signin/view/signin_view.dart';
 import 'package:influencer_app/app/views/view_splash/splash_view.dart';
 import 'package:influencer_app/core/constants/colors_constants/light_theme_constants/light_theme_color_constants.dart';
 import 'package:influencer_app/core/extension/context_extension.dart';
@@ -6,21 +7,22 @@ import 'package:influencer_app/core/extension/context_extension.dart';
 final PageController controller = PageController(initialPage: 0);
 // ignore: invalid_annotation_target
 
-Widget onboardingWidget({
-  required pageIndex,
-  required title,
-  required desc,
-  required BuildContext context,
-  required String image,
-}) {
+Widget onboardingWidget(
+    {required pageIndex,
+    required title,
+    required desc,
+    required BuildContext context,
+    required String image,
+    required ontap}) {
   return Column(
     mainAxisAlignment: context.center,
     children: [
       Image.asset(image),
-      SizedBox(child: context.sizedHeighthBoxExtraHigh),
-      Text(title, style: TextStyle(fontSize: 35)
-          // Theme.of(context).textTheme.titleLarge,
-          ),
+      const SizedBox(height: 40),
+      Text(
+        title,
+        style: Theme.of(context).textTheme.titleLarge,
+      ),
       const SizedBox(height: 10),
       Padding(
         padding: context.horizontalPaddingHigh,
@@ -30,7 +32,7 @@ Widget onboardingWidget({
           style: Theme.of(context).textTheme.titleSmall,
         ),
       ),
-      SizedBox(child: context.sizedHeighthBoxExtraHigh),
+      const SizedBox(height: 120),
       Padding(
         padding: context.horizontalPaddingHigh,
         child: Row(
@@ -42,10 +44,7 @@ Widget onboardingWidget({
                   pageIndex != 2, // don't show on page with index 2 (last page)
               child: GestureDetector(
                 onTap: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) {
-                    return const SplashView();
-                  }));
+                  ontap;
                 },
                 child: const Text(
                   'Skip',
@@ -60,12 +59,9 @@ Widget onboardingWidget({
             GestureDetector(
               onTap: () {
                 pageIndex == 2
-                    ? Navigator.of(context)
-                        .push(MaterialPageRoute(builder: (context) {
-                        return const SplashView();
-                      }))
+                    ? ontap
                     : controller.animateToPage(pageIndex + 1,
-                        duration: const Duration(milliseconds: 500),
+                        duration: context.durationHigh,
                         curve: Curves.decelerate);
               },
               child: pageIndex == 2

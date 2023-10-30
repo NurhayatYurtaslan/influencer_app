@@ -35,9 +35,7 @@ class OnboardingView extends StatelessWidget {
                   },
                   children: [
                     onboardingWidget(
-                      ontap: () {
-                        context.router.push(SignUpViewRoute());
-                      },
+                      
                       context: context,
                       pageIndex: 0,
                       image: Assets.images.png.imagePngOnboardingOne.path,
@@ -45,9 +43,7 @@ class OnboardingView extends StatelessWidget {
                       desc: L10n.of(context)!.onbdescone,
                     ),
                     onboardingWidget(
-                      ontap: () {
-                        context.router.push(SignUpViewRoute());
-                      },
+                      
                       context: context,
                       image: Assets.images.png.imagePngOnboardingTwo.path,
                       pageIndex: 1,
@@ -56,7 +52,7 @@ class OnboardingView extends StatelessWidget {
                       desc: L10n.of(context)!.onbdesctwo,
                     ),
                     onboardingWidget(
-                      ontap: context.router.push(SignUpViewRoute()),
+                      
                       context: context,
                       image: Assets.images.png.imagePngOnboardingThree.path,
                       pageIndex: 2,

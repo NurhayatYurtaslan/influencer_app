@@ -1,4 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:influencer_app/app/routes/app_router.gr.dart';
 import 'package:influencer_app/app/views/view_signin/view/signin_view.dart';
 import 'package:influencer_app/app/views/view_splash/splash_view.dart';
 import 'package:influencer_app/core/constants/colors_constants/light_theme_constants/light_theme_color_constants.dart';
@@ -13,7 +15,7 @@ Widget onboardingWidget(
     required desc,
     required BuildContext context,
     required String image,
-    required ontap}) {
+    }) {
   return Column(
     mainAxisAlignment: context.center,
     children: [
@@ -44,7 +46,8 @@ Widget onboardingWidget(
                   pageIndex != 2, // don't show on page with index 2 (last page)
               child: GestureDetector(
                 onTap: () {
-                  ontap;
+                  context.router.push(SignUpViewRoute());
+                     
                 },
                 child: const Text(
                   'Skip',
@@ -59,9 +62,9 @@ Widget onboardingWidget(
             GestureDetector(
               onTap: () {
                 pageIndex == 2
-                    ? ontap
+                    ? context.router.push(SignUpViewRoute())
                     : controller.animateToPage(pageIndex + 1,
-                        duration: context.durationHigh,
+                        duration: context.durationLow,
                         curve: Curves.decelerate);
               },
               child: pageIndex == 2

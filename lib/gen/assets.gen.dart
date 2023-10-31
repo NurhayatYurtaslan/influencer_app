@@ -38,13 +38,23 @@ class $AssetsImagesPngGen {
   AssetGenImage get imagePngOnboardingTwo =>
       const AssetGenImage('assets/images/png/image_png_onboarding_two.png');
 
+  /// File path: assets/images/png/image_png_profile_theme_one.png
+  AssetGenImage get imagePngProfileThemeOne =>
+      const AssetGenImage('assets/images/png/image_png_profile_theme_one.png');
+
+  /// File path: assets/images/png/image_png_profile_theme_two.png
+  AssetGenImage get imagePngProfileThemeTwo =>
+      const AssetGenImage('assets/images/png/image_png_profile_theme_two.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
         imagePngLogo,
         imagePngLogoHorizantal,
         imagePngOnboardingOne,
         imagePngOnboardingThree,
-        imagePngOnboardingTwo
+        imagePngOnboardingTwo,
+        imagePngProfileThemeOne,
+        imagePngProfileThemeTwo
       ];
 }
 

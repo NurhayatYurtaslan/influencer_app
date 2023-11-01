@@ -8,66 +8,87 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i7;
+import 'package:auto_route/auto_route.dart' as _i8;
+import 'package:influencer_app/app/views/home_view/home_view.dart' as _i1;
 import 'package:influencer_app/app/views/profile_type_view/profil_type_view.dart'
-    as _i3;
-import 'package:influencer_app/app/views/view_onboarding/onboarding_view.dart'
-    as _i2;
-import 'package:influencer_app/app/views/view_signin/view/signin_view.dart'
     as _i4;
-import 'package:influencer_app/app/views/view_signup/view/signup_view.dart'
+import 'package:influencer_app/app/views/view_onboarding/onboarding_view.dart'
+    as _i3;
+import 'package:influencer_app/app/views/view_signin/view/signin_view.dart'
     as _i5;
-import 'package:influencer_app/app/views/view_splash/splash_view.dart' as _i6;
-import 'package:influencer_app/core/widgets/navbar_widget.dart' as _i1;
+import 'package:influencer_app/app/views/view_signup/view/signup_view.dart'
+    as _i6;
+import 'package:influencer_app/app/views/view_splash/splash_view.dart' as _i7;
+import 'package:influencer_app/core/widgets/navbar_widget.dart' as _i2;
 
-abstract class $AppRouter extends _i7.RootStackRouter {
+abstract class $AppRouter extends _i8.RootStackRouter {
   $AppRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i7.PageFactory> pagesMap = {
-    NavBarViewRoute.name: (routeData) {
-      return _i7.AutoRoutePage<dynamic>(
+  final Map<String, _i8.PageFactory> pagesMap = {
+    HomeViewRoute.name: (routeData) {
+      return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.NavBarView(),
+        child: const _i1.HomeView(),
+      );
+    },
+    NavBarViewRoute.name: (routeData) {
+      return _i8.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i2.NavBarView(),
       );
     },
     OnboardingViewRoute.name: (routeData) {
-      return _i7.AutoRoutePage<dynamic>(
+      return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.OnboardingView(),
+        child: const _i3.OnboardingView(),
       );
     },
     ProfileTypeViewRoute.name: (routeData) {
-      return _i7.AutoRoutePage<dynamic>(
+      return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.ProfileTypeView(),
+        child: const _i4.ProfileTypeView(),
       );
     },
     SignInViewRoute.name: (routeData) {
-      return _i7.AutoRoutePage<dynamic>(
+      return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i4.SignInView(),
+        child: const _i5.SignInView(),
       );
     },
     SignUpViewRoute.name: (routeData) {
-      return _i7.AutoRoutePage<dynamic>(
+      return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i5.SignUpView(),
+        child: const _i6.SignUpView(),
       );
     },
     SplashViewRoute.name: (routeData) {
-      return _i7.AutoRoutePage<dynamic>(
+      return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i6.SplashView(),
+        child: const _i7.SplashView(),
       );
     },
   };
 }
 
 /// generated route for
-/// [_i1.NavBarView]
-class NavBarViewRoute extends _i7.PageRouteInfo<void> {
-  const NavBarViewRoute({List<_i7.PageRouteInfo>? children})
+/// [_i1.HomeView]
+class HomeViewRoute extends _i8.PageRouteInfo<void> {
+  const HomeViewRoute({List<_i8.PageRouteInfo>? children})
+      : super(
+          HomeViewRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeViewRoute';
+
+  static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i2.NavBarView]
+class NavBarViewRoute extends _i8.PageRouteInfo<void> {
+  const NavBarViewRoute({List<_i8.PageRouteInfo>? children})
       : super(
           NavBarViewRoute.name,
           initialChildren: children,
@@ -75,13 +96,13 @@ class NavBarViewRoute extends _i7.PageRouteInfo<void> {
 
   static const String name = 'NavBarViewRoute';
 
-  static const _i7.PageInfo<void> page = _i7.PageInfo<void>(name);
+  static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i2.OnboardingView]
-class OnboardingViewRoute extends _i7.PageRouteInfo<void> {
-  const OnboardingViewRoute({List<_i7.PageRouteInfo>? children})
+/// [_i3.OnboardingView]
+class OnboardingViewRoute extends _i8.PageRouteInfo<void> {
+  const OnboardingViewRoute({List<_i8.PageRouteInfo>? children})
       : super(
           OnboardingViewRoute.name,
           initialChildren: children,
@@ -89,13 +110,13 @@ class OnboardingViewRoute extends _i7.PageRouteInfo<void> {
 
   static const String name = 'OnboardingViewRoute';
 
-  static const _i7.PageInfo<void> page = _i7.PageInfo<void>(name);
+  static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i3.ProfileTypeView]
-class ProfileTypeViewRoute extends _i7.PageRouteInfo<void> {
-  const ProfileTypeViewRoute({List<_i7.PageRouteInfo>? children})
+/// [_i4.ProfileTypeView]
+class ProfileTypeViewRoute extends _i8.PageRouteInfo<void> {
+  const ProfileTypeViewRoute({List<_i8.PageRouteInfo>? children})
       : super(
           ProfileTypeViewRoute.name,
           initialChildren: children,
@@ -103,13 +124,13 @@ class ProfileTypeViewRoute extends _i7.PageRouteInfo<void> {
 
   static const String name = 'ProfileTypeViewRoute';
 
-  static const _i7.PageInfo<void> page = _i7.PageInfo<void>(name);
+  static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i4.SignInView]
-class SignInViewRoute extends _i7.PageRouteInfo<void> {
-  const SignInViewRoute({List<_i7.PageRouteInfo>? children})
+/// [_i5.SignInView]
+class SignInViewRoute extends _i8.PageRouteInfo<void> {
+  const SignInViewRoute({List<_i8.PageRouteInfo>? children})
       : super(
           SignInViewRoute.name,
           initialChildren: children,
@@ -117,13 +138,13 @@ class SignInViewRoute extends _i7.PageRouteInfo<void> {
 
   static const String name = 'SignInViewRoute';
 
-  static const _i7.PageInfo<void> page = _i7.PageInfo<void>(name);
+  static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i5.SignUpView]
-class SignUpViewRoute extends _i7.PageRouteInfo<void> {
-  const SignUpViewRoute({List<_i7.PageRouteInfo>? children})
+/// [_i6.SignUpView]
+class SignUpViewRoute extends _i8.PageRouteInfo<void> {
+  const SignUpViewRoute({List<_i8.PageRouteInfo>? children})
       : super(
           SignUpViewRoute.name,
           initialChildren: children,
@@ -131,13 +152,13 @@ class SignUpViewRoute extends _i7.PageRouteInfo<void> {
 
   static const String name = 'SignUpViewRoute';
 
-  static const _i7.PageInfo<void> page = _i7.PageInfo<void>(name);
+  static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i6.SplashView]
-class SplashViewRoute extends _i7.PageRouteInfo<void> {
-  const SplashViewRoute({List<_i7.PageRouteInfo>? children})
+/// [_i7.SplashView]
+class SplashViewRoute extends _i8.PageRouteInfo<void> {
+  const SplashViewRoute({List<_i8.PageRouteInfo>? children})
       : super(
           SplashViewRoute.name,
           initialChildren: children,
@@ -145,5 +166,5 @@ class SplashViewRoute extends _i7.PageRouteInfo<void> {
 
   static const String name = 'SplashViewRoute';
 
-  static const _i7.PageInfo<void> page = _i7.PageInfo<void>(name);
+  static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
 }

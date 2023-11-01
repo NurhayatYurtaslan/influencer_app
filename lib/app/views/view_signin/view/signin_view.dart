@@ -14,7 +14,7 @@ class SignInView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => SignInViewModel(),
+      create: (context) => SignInViewModel(context),
       child:
           BlocBuilder<SignInViewModel, SignInState>(builder: (context, state) {
         return Scaffold(

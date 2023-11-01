@@ -1,8 +1,10 @@
 import 'dart:async';
+import 'package:auto_route/auto_route.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:influencer_app/app/routes/app_router.gr.dart';
 import 'package:influencer_app/app/views/view_signin/viewmodel/signin_event.dart';
 import 'package:influencer_app/app/views/view_signin/viewmodel/signin_state.dart';
 import 'package:influencer_app/app/views/view_splash/splash_view.dart';
@@ -11,7 +13,10 @@ import 'package:influencer_app/core/repository/service/auth_service.dart';
 import 'package:influencer_app/core/widgets/snackbar_widget.dart';
 
 class SignInViewModel extends Bloc<SignInEvent, SignInState> {
-  SignInViewModel() : super(SignInInitialState()) {
+  BuildContext context;
+  SignInViewModel(
+    this.context,
+  ) : super(SignInInitialState()) {
     on<SignInInitialEvent>(_initial);
   }
 
@@ -34,8 +39,7 @@ class SignInViewModel extends Bloc<SignInEvent, SignInState> {
             subTitle: 'Giriş başarılı, ana sayfaya yönlendiriliyorsunuz...',
           )));
       Future.delayed(const Duration(seconds: 2), () {
-        Navigator.of(event.context)
-            .push(MaterialPageRoute(builder: (context) => const SplashView()));
+        context.router.push(NavBarViewRoute());
       });
     } catch (e, stack) {
       FirebaseCrashlytics.instance.recordError(e, stack, fatal: true);

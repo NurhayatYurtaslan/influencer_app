@@ -24,4 +24,7 @@ class L10nEn extends L10n {
 
   @override
   String get onbdescthree => 'By boosting your producivity we help you achieve higher goals';
+
+  @override
+  String get getstarted => 'Get Started';
 }

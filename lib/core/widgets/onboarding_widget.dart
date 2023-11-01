@@ -1,8 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:influencer_app/app/l10n/app_localizations.dart';
 import 'package:influencer_app/app/routes/app_router.gr.dart';
-import 'package:influencer_app/app/views/view_signin/view/signin_view.dart';
-import 'package:influencer_app/app/views/view_splash/splash_view.dart';
 import 'package:influencer_app/core/constants/colors_constants/light_theme_constants/light_theme_color_constants.dart';
 import 'package:influencer_app/core/extension/context_extension.dart';
 
@@ -46,7 +45,7 @@ Widget onboardingWidget({
                   pageIndex != 2, // don't show on page with index 2 (last page)
               child: GestureDetector(
                 onTap: () {
-                  context.router.push(SignUpViewRoute());
+                  context.router.push(const SignUpViewRoute());
                 },
                 child: const Text(
                   'Skip',
@@ -61,7 +60,7 @@ Widget onboardingWidget({
             GestureDetector(
               onTap: () {
                 pageIndex == 2
-                    ? context.router.push(WelcomeScreenRoute())
+                    ? context.router.push(const WelcomeScreenRoute())
                     : controller.animateToPage(pageIndex + 1,
                         duration: context.durationLow,
                         curve: Curves.decelerate);
@@ -75,10 +74,10 @@ Widget onboardingWidget({
                         color: AppLightColorConstants.buttonSecondaryColor,
                         borderRadius: BorderRadius.circular(18),
                       ),
-                      child: const Text(
-                        'Get Started',
+                      child: Text(
+                        L10n.of(context)!.getstarted ,
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,

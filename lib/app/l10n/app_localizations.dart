@@ -134,6 +134,12 @@ abstract class L10n {
   /// In en, this message translates to:
   /// **'By boosting your producivity we help you achieve higher goals'**
   String get onbdescthree;
+
+  /// No description provided for @getstarted.
+  ///
+  /// In en, this message translates to:
+  /// **'Get Started'**
+  String get getstarted;
 }
 
 class _L10nDelegate extends LocalizationsDelegate<L10n> {

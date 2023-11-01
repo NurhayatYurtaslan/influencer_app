@@ -9,10 +9,9 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i9;
-import 'package:influencer_app/app/views/front_view/front_view.dart' as _i8;
-import 'package:influencer_app/app/views/home_view/home_view.dart' as _i1;
 import 'package:influencer_app/app/views/profile_type_view/profil_type_view.dart'
     as _i4;
+import 'package:influencer_app/app/views/view_home/view_home.dart' as _i1;
 import 'package:influencer_app/app/views/view_onboarding/onboarding_view.dart'
     as _i3;
 import 'package:influencer_app/app/views/view_signin/view/signin_view.dart'
@@ -20,7 +19,8 @@ import 'package:influencer_app/app/views/view_signin/view/signin_view.dart'
 import 'package:influencer_app/app/views/view_signup/view/signup_view.dart'
     as _i6;
 import 'package:influencer_app/app/views/view_splash/splash_view.dart' as _i7;
-import 'package:influencer_app/core/widgets/navbar/navbar.dart' as _i2;
+import 'package:influencer_app/app/views/view_welcome/welcome_view.dart' as _i8;
+import 'package:influencer_app/core/widgets/navbar_widget.dart' as _i2;
 
 abstract class $AppRouter extends _i9.RootStackRouter {
   $AppRouter({super.navigatorKey});

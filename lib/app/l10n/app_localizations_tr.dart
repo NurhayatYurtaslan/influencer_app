@@ -24,4 +24,7 @@ class L10nTr extends L10n {
 
   @override
   String get onbdescthree => 'Verimliliğinizi artırarak daha yüksek hedeflere ulaşmanıza yardımcı oluyoruz';
+
+  @override
+  String get getstarted => 'Hadi Başlayalım';
 }

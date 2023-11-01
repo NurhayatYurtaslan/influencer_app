@@ -17,7 +17,7 @@ class AppRouter extends $AppRouter {
         AutoRoute(page: NavBarViewRoute.page, children: [
           AutoRoute(page: HomeViewRoute.page),
           AutoRoute(page: ProfileTypeViewRoute.page),
-          AutoRoute(page: ImageViewRoute.page)
+          
         ]),
       ];
 }

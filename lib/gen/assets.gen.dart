@@ -18,6 +18,10 @@ class $AssetsImagesGen {
 class $AssetsImagesPngGen {
   const $AssetsImagesPngGen();
 
+  /// File path: assets/images/png/image_png_bg.png
+  AssetGenImage get imagePngBg =>
+      const AssetGenImage('assets/images/png/image_png_bg.png');
+
   /// File path: assets/images/png/image_png_logo.png
   AssetGenImage get imagePngLogo =>
       const AssetGenImage('assets/images/png/image_png_logo.png');
@@ -48,6 +52,7 @@ class $AssetsImagesPngGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
+        imagePngBg,
         imagePngLogo,
         imagePngLogoHorizantal,
         imagePngOnboardingOne,

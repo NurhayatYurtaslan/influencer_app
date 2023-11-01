@@ -9,13 +9,13 @@ import 'package:influencer_app/core/extension/context_extension.dart';
 final PageController controller = PageController(initialPage: 0);
 // ignore: invalid_annotation_target
 
-Widget onboardingWidget(
-    {required pageIndex,
-    required title,
-    required desc,
-    required BuildContext context,
-    required String image,
-    }) {
+Widget onboardingWidget({
+  required pageIndex,
+  required title,
+  required desc,
+  required BuildContext context,
+  required String image,
+}) {
   return Column(
     mainAxisAlignment: context.center,
     children: [
@@ -47,7 +47,6 @@ Widget onboardingWidget(
               child: GestureDetector(
                 onTap: () {
                   context.router.push(SignUpViewRoute());
-                     
                 },
                 child: const Text(
                   'Skip',
@@ -62,7 +61,7 @@ Widget onboardingWidget(
             GestureDetector(
               onTap: () {
                 pageIndex == 2
-                    ? context.router.push(SignUpViewRoute())
+                    ? context.router.push(WelcomeScreenRoute())
                     : controller.animateToPage(pageIndex + 1,
                         duration: context.durationLow,
                         curve: Curves.decelerate);

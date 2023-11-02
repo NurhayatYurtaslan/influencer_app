@@ -10,7 +10,13 @@ class NavBarView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
-      routes: const [ProfileTypeViewRoute(), ProfileTypeViewRoute(), ProfileTypeViewRoute(),ProfileTypeViewRoute(),ProfileTypeViewRoute(),],
+      routes: const [
+        HomeViewRoute(),
+        GridViewHomeRoute(),
+        ProfileTypeViewRoute(),
+        ProfileTypeViewRoute(),
+        ProfileTypeViewRoute(),
+      ],
       bottomNavigationBuilder: (context, tabsRouter) {
         return BottomNavigationBar(
             items: bottomNavItems,
@@ -23,14 +29,14 @@ class NavBarView extends StatelessWidget {
   }
 }
 
-List<BottomNavigationBarItem> bottomNavItems =  <BottomNavigationBarItem>[
+List<BottomNavigationBarItem> bottomNavItems = <BottomNavigationBarItem>[
   const BottomNavigationBarItem(
     icon: Icon(Icons.home_outlined),
     label: 'Home',
   ),
   const BottomNavigationBarItem(
     icon: Icon(Icons.grid_3x3),
-    label: 'Category',
+    label: 'Post',
   ),
   const BottomNavigationBarItem(
     icon: Icon(Icons.search_outlined),

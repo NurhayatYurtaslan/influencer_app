@@ -30,7 +30,7 @@ class SignUpView extends StatelessWidget {
                       children: [
                         const Row(
                           children: [
-                            Text('Kayıt ol',
+                            Text('Sign up',
                                 style: TextStyle(
                                     fontSize: 30, fontWeight: FontWeight.bold)),
                           ],
@@ -38,7 +38,7 @@ class SignUpView extends StatelessWidget {
                         Row(
                           children: [
                             const Text(
-                              'Zaten hesabınız var mı?',
+                              'Do you already have an account?',
                               style: TextStyle(fontSize: 18),
                             ),
                             TextButton(
@@ -47,35 +47,35 @@ class SignUpView extends StatelessWidget {
                                   builder: (context) => const SignInView(),
                                 ));
                               },
-                              child: const Text('Giriş yap'),
+                              child: const Text('Sign In'),
                             ),
                           ],
                         ),
-                        textInput('İsim', 'isminizi giriniz', context,
+                        textInput('Name', 'Please name', context,
                             context.read<SignUpViewModel>().nameController),
-                        textInput('Soyad', 'Soyadınızı giriniz', context,
+                        textInput('Surnmae', 'Plase surname', context,
                             context.read<SignUpViewModel>().surNameController),
                         textInput(
-                          'Şifre',
-                          'şifrenizi giriniz',
+                          'Password',
+                          'Please Password',
                           context,
                           context.read<SignUpViewModel>().passwordController,
                         ),
                         textInput(
-                          'E-posta',
-                          'e-posta adresinizi giriniz',
+                          'E-mail',
+                          'Please e-mail',
                           context,
                           context.read<SignUpViewModel>().emailController,
                         ),
                         textInput(
-                          'Telefon',
-                          'telefon numaranızı giriniz',
+                          'Phone',
+                          'Please Phone',
                           context,
                           context.read<SignUpViewModel>().phoneController,
                         ),
                         textInput(
-                          'Adres',
-                          'adresinizi giriniz',
+                          'Address',
+                          'plaease adress',
                           context,
                           context.read<SignUpViewModel>().adressController,
                         ),

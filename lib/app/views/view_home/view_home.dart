@@ -53,7 +53,7 @@ class _HomeViewState extends State<HomeView> {
                       height: 10,
                     ),
                     Text(
-                      "\$ ${post["price"]}",
+                      "\price: ${post["price"]}",
                       style: const TextStyle(
                           fontSize: 25,
                           color: Colors.black,

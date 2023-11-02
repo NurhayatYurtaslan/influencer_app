@@ -7,7 +7,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:influencer_app/app/routes/app_router.gr.dart';
 import 'package:influencer_app/app/views/view_signin/viewmodel/signin_event.dart';
 import 'package:influencer_app/app/views/view_signin/viewmodel/signin_state.dart';
-import 'package:influencer_app/app/views/view_splash/splash_view.dart';
 import 'package:influencer_app/core/repository/model/auth/signin/signin_request_model.dart';
 import 'package:influencer_app/core/repository/service/auth_service.dart';
 import 'package:influencer_app/core/widgets/snackbar_widget.dart';
@@ -36,7 +35,7 @@ class SignInViewModel extends Bloc<SignInEvent, SignInState> {
           elevation: 0,
           backgroundColor: Colors.transparent,
           content: SnackBarWidget.success(
-            subTitle: 'Giriş başarılı, ana sayfaya yönlendiriliyorsunuz...',
+            subTitle: 'Login is successful, you are redirected to the home page...',
           )));
       Future.delayed(const Duration(seconds: 2), () {
         context.router.push(NavBarViewRoute());
@@ -50,7 +49,7 @@ class SignInViewModel extends Bloc<SignInEvent, SignInState> {
                   elevation: 0,
                   backgroundColor: Colors.transparent,
                   content: SnackBarWidget.error(
-                    subTitle: 'Email formatınız hatalı',
+                    subTitle: 'Your email format is incorrect',
                   )));
             })
           : Future.delayed(const Duration(seconds: 2), () {

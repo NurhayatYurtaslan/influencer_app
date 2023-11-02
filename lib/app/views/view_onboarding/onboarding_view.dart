@@ -3,7 +3,6 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:influencer_app/app/l10n/app_localizations.dart';
-import 'package:influencer_app/app/routes/app_router.gr.dart';
 import 'package:influencer_app/app/views/view_onboarding/bloc/onboarding_bloc.dart';
 import 'package:influencer_app/app/views/view_onboarding/bloc/onboarding_event.dart';
 import 'package:influencer_app/app/views/view_onboarding/bloc/onboarding_state.dart';

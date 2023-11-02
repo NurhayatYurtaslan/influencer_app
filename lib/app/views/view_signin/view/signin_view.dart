@@ -25,13 +25,13 @@ class SignInView extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  'HOŞGELDİNİZ',
+                  'Welcome',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 Row(
                   children: [
                     const Text(
-                      'Hesabınız yok mu?',
+                      "Don't you have an account?",
                     ),
                     TextButton(
                         onPressed: () {

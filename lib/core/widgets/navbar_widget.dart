@@ -13,8 +13,8 @@ class NavBarView extends StatelessWidget {
       routes: const [
         HomeViewRoute(),
         GridViewHomeRoute(),
-        ProfileTypeViewRoute(),
-        ProfileTypeViewRoute(),
+        GridViewHomeRoute(),
+        GridViewHomeRoute(),
         ProfileTypeViewRoute(),
       ],
       bottomNavigationBuilder: (context, tabsRouter) {

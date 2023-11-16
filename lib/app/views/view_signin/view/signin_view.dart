@@ -32,13 +32,13 @@ class SignInView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 100,
                 ),
                 Text(
                   'Welcome',
                   textAlign: context.textcenter,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
                       color: AppLightColorConstants.buttonSecondaryColor),
@@ -70,7 +70,6 @@ class SignInView extends StatelessWidget {
                   children: [
                     textInput(
                         'E-mail',
-                        
                         'E-mail',
                         context,
                         const Icon(Icons.email_outlined),
@@ -110,7 +109,10 @@ class SignInView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: 20),
-        Text(label, style: TextStyle(color: AppLightColorConstants.buttonPrimaryColor) ),
+        Text(label,
+            style: const TextStyle(
+                color: AppLightColorConstants.buttonSecondaryColor,
+                fontWeight: FontWeight.bold)),
         const SizedBox(height: 10),
         SizedBox(
           child: TextFormField(

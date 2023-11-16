@@ -34,7 +34,6 @@ class OnboardingView extends StatelessWidget {
                   },
                   children: [
                     onboardingWidget(
-                      
                       context: context,
                       pageIndex: 0,
                       image: Assets.images.png.imagePngOnboardingOne.path,
@@ -42,7 +41,6 @@ class OnboardingView extends StatelessWidget {
                       desc: L10n.of(context)!.onbdescone,
                     ),
                     onboardingWidget(
-                      
                       context: context,
                       image: Assets.images.png.imagePngOnboardingTwo.path,
                       pageIndex: 1,
@@ -51,7 +49,6 @@ class OnboardingView extends StatelessWidget {
                       desc: L10n.of(context)!.onbdesctwo,
                     ),
                     onboardingWidget(
-                      
                       context: context,
                       image: Assets.images.png.imagePngOnboardingThree.path,
                       pageIndex: 2,
@@ -62,7 +59,7 @@ class OnboardingView extends StatelessWidget {
                   ],
                 ),
                 Positioned(
-                  bottom: 150,
+                  bottom: 50,
                   child: DotsIndicator(
                     dotsCount: 3,
                     position: BlocProvider.of<OnboardingBloc>(context)

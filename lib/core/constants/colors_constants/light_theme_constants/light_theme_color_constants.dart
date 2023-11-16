@@ -14,7 +14,7 @@ final class AppLightColorConstants {
 
   //button color
 
-  static const Color buttonPrimaryColor = Color(0xffcb568a);
+  static const Color buttonPrimaryColor = Color.fromARGB(255, 180, 86, 203);
   static const Color buttonSecondaryColor = Color(0xfffdd6d7);
   static const Color buttonDisabledColor = Color(0xffd03162);
   static const Color buttonErrorColor = Color(0xFFF44336);

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:influencer_app/core/constants/colors_constants/light_theme_constants/light_theme_color_constants.dart';
 
@@ -40,13 +39,13 @@ final class AppThemeLight {
   static ElevatedButtonThemeData elevatedButtonTheme() {
     return ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppLightColorConstants.buttonPrimaryColor,
+        backgroundColor: AppLightColorConstants.buttonDisabledColor,
         foregroundColor: Colors.white,
         textStyle: const TextStyle(fontSize: 16),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50),
         ),
-        disabledBackgroundColor: AppLightColorConstants.buttonDisabledColor,
+        disabledBackgroundColor: AppLightColorConstants.buttonPrimaryColor,
       ),
     );
   }

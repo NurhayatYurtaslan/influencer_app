@@ -50,12 +50,13 @@ class $AssetsImagesPngGen {
   AssetGenImage get imagePngProfileThemeTwo =>
       const AssetGenImage('assets/images/png/image_png_profile_theme_two.png');
 
+  /// File path: assets/images/png/image_png_signin_bg.png
+  AssetGenImage get imagePngSigninBg =>
+      const AssetGenImage('assets/images/png/image_png_signin_bg.png');
+
   /// File path: assets/images/png/image_splash_bg.png
   AssetGenImage get imageSplashBg =>
       const AssetGenImage('assets/images/png/image_splash_bg.png');
-
-  
-
 
   /// List of all assets
   List<AssetGenImage> get values => [
@@ -67,6 +68,7 @@ class $AssetsImagesPngGen {
         imagePngOnboardingTwo,
         imagePngProfileThemeOne,
         imagePngProfileThemeTwo,
+        imagePngSigninBg,
         imageSplashBg
       ];
 }

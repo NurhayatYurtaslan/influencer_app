@@ -20,82 +20,94 @@ class SignInView extends StatelessWidget {
       child:
           BlocBuilder<SignInViewModel, SignInState>(builder: (context, state) {
         return Scaffold(
-            body: Stack(children: [
-          Image.asset(
-            Assets.images.png.imagePngBg.path,
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: double.infinity,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(40),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(
-                  height: 100,
-                ),
-                Text(
-                  'Welcome',
-                  textAlign: context.textcenter,
-                  style: const TextStyle(
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold,
-                      color: AppLightColorConstants.buttonSecondaryColor),
-                ),
-                Row(
-                  children: [
-                    const Text(
-                      "Don't you have an account?",
-                      style: TextStyle(
+            body: SingleChildScrollView(
+          child: Stack(children: [
+            Image.asset(
+              Assets.images.png.imagePngBg.path,
+              fit: BoxFit.fitHeight,
+              height: MediaQuery.of(context).size.height,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(30),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 100,
+                  ),
+                  Text(
+                    'Welcome',
+                    textAlign: context.textcenter,
+                    style: const TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
+                        color: AppLightColorConstants.buttonSecondaryColor),
+                  ),
+                  Row(
+                    children: [
+                      const Text(
+                        "Don't you have an account?",
+                        style: TextStyle(
                           color: AppLightColorConstants.buttonSecondaryColor,
                           fontSize: 18,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    TextButton(
-                        onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => const SignUpView()));
-                        },
-                        child: const Text(
-                          'Sign Up',
-                          style: TextStyle(
-                              color: AppLightColorConstants.buttonPrimaryColor,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),
-                        ))
-                  ],
-                ),
-                Column(
-                  children: [
-                    textInput(
-                        'E-mail',
-                        'E-mail',
-                        context,
-                        const Icon(Icons.email_outlined),
-                        context.read<SignInViewModel>().emailController),
-                    textInput(
-                        'Password',
-                        'Password',
-                        context,
-                        const Icon(Icons.key),
-                        context.read<SignInViewModel>().passwordController),
-                    const SizedBox(height: 25),
-                    SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                            onPressed: () {
-                              context
-                                  .read<SignInViewModel>()
-                                  .add(SignInInitialEvent(context));
-                            },
-                            child: const Text('Giriş Yap')))
-                  ],
-                )
-              ],
+                        ),
+                      ),
+                      TextButton(
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const SignUpView()));
+                          },
+                          child: const Text(
+                            'Sign Up',
+                            style: TextStyle(
+                                color:
+                                    AppLightColorConstants.buttonSecondaryColor,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold),
+                          ))
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      textInput(
+                          'E-mail',
+                          'E-mail',
+                          context,
+                          const Icon(Icons.email_outlined),
+                          context.read<SignInViewModel>().emailController),
+                      textInput(
+                          'Password',
+                          'Password',
+                          context,
+                          const Icon(Icons.key),
+                          context.read<SignInViewModel>().passwordController),
+                      const SizedBox(height: 25),
+                      SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    AppLightColorConstants.buttonPrimaryColor,
+                              ),
+                              onPressed: () {
+                                context
+                                    .read<SignInViewModel>()
+                                    .add(SignInInitialEvent(context));
+                              },
+                              child: const Text(
+                                'Sign In',
+                                style: TextStyle(
+                                    color: AppLightColorConstants
+                                        .buttonSecondaryColor,
+                                    fontWeight: FontWeight.bold),
+                              )))
+                    ],
+                  )
+                ],
+              ),
             ),
-          ),
-        ]));
+          ]),
+        ));
       }),
     );
   }

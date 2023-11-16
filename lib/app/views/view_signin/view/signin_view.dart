@@ -1,4 +1,3 @@
-
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -7,6 +6,9 @@ import 'package:influencer_app/app/views/view_signin/viewmodel/signin_event.dart
 import 'package:influencer_app/app/views/view_signin/viewmodel/signin_state.dart';
 import 'package:influencer_app/app/views/view_signin/viewmodel/signin_view_model.dart';
 import 'package:influencer_app/app/views/view_signup/view/signup_view.dart';
+import 'package:influencer_app/core/constants/colors_constants/light_theme_constants/light_theme_color_constants.dart';
+import 'package:influencer_app/core/extension/context_extension.dart';
+import 'package:influencer_app/gen/assets.gen.dart';
 
 @RoutePage()
 class SignInView extends StatelessWidget {
@@ -18,33 +20,57 @@ class SignInView extends StatelessWidget {
       child:
           BlocBuilder<SignInViewModel, SignInState>(builder: (context, state) {
         return Scaffold(
-            body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
+            body: Stack(children: [
+          Image.asset(
+            Assets.images.png.imagePngBg.path,
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(40),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                SizedBox(
+                  height: 100,
+                ),
+                Text(
                   'Welcome',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  textAlign: context.textcenter,
+                  style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      color: AppLightColorConstants.buttonSecondaryColor),
                 ),
                 Row(
                   children: [
                     const Text(
                       "Don't you have an account?",
+                      style: TextStyle(
+                          color: AppLightColorConstants.buttonSecondaryColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
                     ),
                     TextButton(
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) => const SignUpView()));
                         },
-                        child: const Text('Kayıt Olun'))
+                        child: const Text(
+                          'Sign Up',
+                          style: TextStyle(
+                              color: AppLightColorConstants.buttonPrimaryColor,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold),
+                        ))
                   ],
                 ),
                 Column(
                   children: [
                     textInput(
                         'E-mail',
+                        
                         'E-mail',
                         context,
                         const Icon(Icons.email_outlined),
@@ -70,7 +96,7 @@ class SignInView extends StatelessWidget {
               ],
             ),
           ),
-        ));
+        ]));
       }),
     );
   }
@@ -84,7 +110,7 @@ class SignInView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: 20),
-        Text(label, style: Theme.of(context).textTheme.titleMedium),
+        Text(label, style: TextStyle(color: AppLightColorConstants.buttonPrimaryColor) ),
         const SizedBox(height: 10),
         SizedBox(
           child: TextFormField(

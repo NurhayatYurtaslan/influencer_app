@@ -28,7 +28,7 @@ Widget onboardingWidget({
           const SizedBox(height: 175),
           Text(
             title,
-            style: Theme.of(context).textTheme.titleLarge,
+            style: Theme.of(context).textTheme.headlineMedium,
           ),
           const SizedBox(height: 10),
           Padding(
@@ -36,10 +36,10 @@ Widget onboardingWidget({
             child: Text(
               desc,
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.titleSmall,
+              style: Theme.of(context).textTheme.titleMedium,
             ),
           ),
-          const SizedBox(height: 120),
+          const SizedBox(height: 50),
           Padding(
             padding: context.horizontalPaddingHigh,
             child: Row(
@@ -57,7 +57,7 @@ Widget onboardingWidget({
                       'Skip',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          fontSize: 15,
+                          fontSize: 18,
                           fontWeight: FontWeight.normal,
                           color: AppLightColorConstants.buttonPrimaryColor),
                     ),

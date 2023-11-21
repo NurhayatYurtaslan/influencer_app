@@ -131,11 +131,19 @@ class SignInView extends StatelessWidget {
             controller: controller,
             autovalidateMode: AutovalidateMode.onUserInteraction,
             keyboardType: keyboardType ?? TextInputType.text,
+            style: TextStyle(
+                color: Colors
+                    .white), // Metin rengini beyaz yapmak için style kullanın
             decoration: InputDecoration(
-                contentPadding: const EdgeInsets.only(top: 10, left: 10),
-                prefixIcon: isIcon,
-                hintText: hintText,
-                border: const OutlineInputBorder()),
+              floatingLabelStyle: TextStyle(color: Colors.white),
+              hintStyle: TextStyle(color: Colors.white),
+              // fillColor: Colors.white,
+              focusColor: Colors.white,
+              contentPadding: const EdgeInsets.only(top: 10, left: 10),
+              prefixIcon: isIcon,
+              hintText: hintText,
+              border: const OutlineInputBorder(),
+            ),
           ),
         )
       ],

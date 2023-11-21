@@ -1,4 +1,3 @@
-
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -132,7 +131,7 @@ class SignUpView extends StatelessWidget {
               prefixIcon: prefixIcon,
               hintText: hintText,
               hintStyle: const TextStyle(
-                color: const Color.fromRGBO(184, 184, 184, 0.8),
+                color: Colors.white,
               ),
               fillColor: Colors.white,
               filled: true,
